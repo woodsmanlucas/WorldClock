@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Clock } from './ClockDirective';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, Clock
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ import { routing }        from './app.routing';
     AppComponent, Clock, choose_city, timePipe
   ],
   imports: [
+    routing,
     BrowserModule,
     AppRoutingModule
   ],

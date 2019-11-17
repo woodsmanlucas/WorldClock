@@ -7,11 +7,12 @@ import { Clock } from './ClockDirective';
 import { choose_city } from './ChooseCityDirective'
 import { timePipe } from './app.timePipe';
 import { routing }        from './app.routing';
+import {third } from './3rdDirective';
 
 
 @NgModule({
   declarations: [
-    AppComponent, Clock, choose_city, timePipe
+    AppComponent, Clock, choose_city, timePipe, third
   ],
   imports: [
     routing,

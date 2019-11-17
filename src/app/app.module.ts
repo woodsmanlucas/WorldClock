@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Clock } from './ClockDirective';
 import { choose_city } from './ChooseCityDirective'
+import { timePipe } from './app.timePipe';
 
 @NgModule({
   declarations: [
-    AppComponent, Clock, choose_city
+    AppComponent, Clock, choose_city, timePipe
   ],
   imports: [
     BrowserModule,

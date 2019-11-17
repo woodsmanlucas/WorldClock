@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MyCitiesService} from './myCitiesService'
+import { Component, OnInit, Output } from '@angular/core';
+import { MyCitiesService} from './myCitiesService';
+
 
 // Define second directive.
 @Component({
@@ -14,7 +15,7 @@ export class choose_city implements OnInit {
 
   ngOnInit()
   {
-  this.selectedcity = "vancouver";
+  this.selectedcity = "london";
   }
 
   constructor(MyCitiesService: MyCitiesService) {
@@ -24,4 +25,6 @@ export class choose_city implements OnInit {
   onClick(city){
     console.log(city);
   }
+
+  @Output() selectedcity = this.selectedcity ;
 }

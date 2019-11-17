@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-<h1>Welcome to my {{title}}</h1>
+<h1>Welcome to my {{title}} the selected city is {{selectedcity}}</h1>
 <nav>
     <a routerLink="/clock" routerLinkActive="active">Clock</a> |
     <a routerLink="/choose-city" routerLinkActive="active">Select City</a> |
@@ -15,6 +15,6 @@
     </nav>
     <!-- Where router should display a view -->
     <router-outlet ></router-outlet>
-    <clock [city]="london"></clock>
+    <clock [selectedcity]="selectedcity"></clock>
 </body>
 </html>

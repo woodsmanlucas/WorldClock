@@ -1,11 +1,6 @@
 <h2>Choose a city here</h2>
 <form action="">
   <select name="cities" id="cities">
-    <option value="Vancouver">Vancouver</option>
-    <option value="Paris">Paris</option>
-    <option value="London">London</option>
-    <option value="Bejing">Bejing</option>
-    <option value="Hong Kong">Hong Kong</option>
-    <option value="New York">New York</option>
+    <option  *ngFor="let city of cities" value="{{city}}">{{city}}</option>
   </select>
 </form>

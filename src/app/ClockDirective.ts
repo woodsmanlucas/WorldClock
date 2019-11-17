@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
     templateUrl: './clock.html',
 })
 export class Clock {
-
+  now = new Date()
 }

@@ -8,6 +8,7 @@ import { choose_city } from './ChooseCityDirective'
 import { timePipe } from './app.timePipe';
 import { routing }        from './app.routing';
 import {third } from './3rdDirective';
+import { FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {third } from './3rdDirective';
   imports: [
     routing,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

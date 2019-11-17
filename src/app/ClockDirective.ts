@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { networkInterfaces } from 'os';
+import { Component, Input } from '@angular/core';
 
 // Define second directive.
 @Component({
@@ -7,7 +6,14 @@ import { networkInterfaces } from 'os';
     selector: 'clock',
     templateUrl: './clock.html',
 })
+
+
+
 export class Clock {
    now = new Date();
-   utc : Date = new Date(this.now.getTime() + this.now.getTimezoneOffset() * 60000);
+   utc = new Date(this.now.getTime() + this.now.getTimezoneOffset() * 60000);
+   city = "vancouver"
+
+   @Input()
+   city: string;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MyCitiesService} from './myCitiesService'
 
 // Define second directive.
@@ -8,10 +8,20 @@ import { MyCitiesService} from './myCitiesService'
     templateUrl: './choose_city.html',
     providers: [MyCitiesService]
 })
-export class choose_city {
+export class choose_city implements OnInit {
   cities: Array<string>;
+  selectedcity: string;
+
+  ngOnInit()
+  {
+  this.selectedcity = "vancouver";
+  }
 
   constructor(MyCitiesService: MyCitiesService) {
       this.cities = MyCitiesService.getCities();
+  }
+
+  onClick(city){
+    console.log(city);
   }
 }

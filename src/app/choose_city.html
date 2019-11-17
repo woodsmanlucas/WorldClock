@@ -1,6 +1,7 @@
 <h2>Choose a city here</h2>
-<form action="">
-  <select name="cities" id="cities">
-    <option  *ngFor="let city of cities" value="{{city}}">{{city}}</option>
+<form>
+  <select [(ngModel)]="selectedcity" name="cities" id="cities">
+    <option  *ngFor="let city of cities" [value]="city">{{city}}</option>
   </select>
+  <h1>{{selectedcity}}</h1>
 </form>

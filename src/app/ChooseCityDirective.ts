@@ -26,5 +26,5 @@ export class choose_city implements OnInit {
     console.log(city);
   }
 
-  @Output() selectedcity = this.selectedcity ;
+  // @Output() selectedcity = this.selectedcity ;
 }

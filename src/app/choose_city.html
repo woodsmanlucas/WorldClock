@@ -3,6 +3,6 @@
   <select [(ngModel)]="selectedcity" name="cities" id="cities">
     <option  *ngFor="let city of cities" [value]="city">{{city}}</option>
   </select>
-  <h1>{{selectedcity}}</h1>
   <clock [selectedcity]=selectedcity></clock>
+  <button (click)="fireEvent()">Send City</button>
 </form>

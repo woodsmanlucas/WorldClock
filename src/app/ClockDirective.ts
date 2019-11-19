@@ -12,7 +12,6 @@ import { Component, Input } from '@angular/core';
 export class Clock {
    now = new Date();
    utc = new Date(this.now.getTime() + this.now.getTimezoneOffset() * 60000);
-   selectedcity = "vancouver";
-
-   @Input() selectedcity: string;
+   
+   @Input() selectedcity = "london";
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MyCitiesService} from './myCitiesService';
 
 
@@ -11,20 +11,29 @@ import { MyCitiesService} from './myCitiesService';
 })
 export class choose_city implements OnInit {
   cities: Array<string>;
-  selectedcity: string;
+  selectedcity : string;
+  
+  @Output() public childEvent = new EventEmitter();
 
+  
   ngOnInit()
   {
-  this.selectedcity = "london";
+    this.selectedcity = "vancouver";  
+
   }
+
+
+  fireEvent(){
+
+    this.childEvent.emit(this.selectedcity);
+
+  }
+
 
   constructor(MyCitiesService: MyCitiesService) {
       this.cities = MyCitiesService.getCities();
+
+      
   }
 
-  onClick(city){
-    console.log(city);
-  }
-
-  // @Output() selectedcity = this.selectedcity ;
 }

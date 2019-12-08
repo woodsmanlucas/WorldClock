@@ -14,5 +14,5 @@ export class Clock {
    utc = new Date(this.now.getTime() + this.now.getTimezoneOffset() * 60000);
    selectedcity = "vancouver";
 
-   @Input() selectedcity: string;
+  @Input() selectedcity: string;
 }
